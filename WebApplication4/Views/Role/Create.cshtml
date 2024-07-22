@@ -1,0 +1,21 @@
+﻿@model Role
+
+@using(Html.BeginForm("Create","Role",FormMethod.Post))
+{
+    <div>
+        <h1>Add Role Details</h1>
+    </div>
+    @Html.AntiForgeryToken()
+   <table>
+       <tr>
+           <td>@Html.Label("Name")</td>
+           <td>@Html.TextBoxFor(m=>m.Name)</td>
+       </tr>
+
+       <tr>
+           <td>
+               <input type="submit" value="Add"/>
+           </td>
+       </tr>
+   </table>
+}
